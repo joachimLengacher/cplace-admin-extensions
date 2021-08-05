@@ -15,9 +15,31 @@
   -->
 
 <template>
-  <div class="custom">
-    <p>Instance: <span v-text="instance.id" /></p>
-    <p>Output: <span v-text="text" /></p>
+  <div class="interfaces">
+    <p>Output: <span v-text="interfaces" /></p>
+    <div class="title">Instance: {{instance.id}}</div>
+    <div class="card-wrapper">
+      <div class="card" v-for="ifc of interfaces" :key="ifc.name">
+        <div class="header">
+          <span class="name">{{ifc.name}}</span>
+          <span class="health-details__status" v-bind:class="[ifc.up ? 'health-details__status--UP' : 'health-details__status--DOWN']">
+            {{ifc.up ? 'UP' : 'DOWN'}}
+          </span>
+        </div>
+        <p class="description">Description vrevrevre btr btrbtg ngthbgb gbfvf grfgfgfg bhbt hththgtght</p>
+        <div class="actions">
+          <a href="#">Documentation</a>
+          <a href="#">Manage interface definitions</a>
+        </div>
+        <div class="tags">
+          <div class="tag">Tag 1</div>
+          <div class="tag">Tag 2</div>
+          <div class="tag">Tag 3</div>
+          <div class="tag">Tag 4</div>
+          <div class="tag">Tag 5</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -30,18 +52,44 @@
       }
     },
     data: () => ({
-      text: ''
+      interfaces: ''
     }),
     async created() {
-      const response = await this.instance.axios.get('actuator/health'); //<2>
-      this.text = response.data;
+      const response = await this.instance.axios.get('actuator/interfaces'); //<2>
+      this.interfaces = response.data;
     }
   };
 </script>
 
 <style>
-  .custom {
+  .interfaces {
     font-size: 20px;
     width: 80%;
+    padding: 20px;
+  }
+  .card-wrapper {
+    display: flex;
+  }
+  .card {
+    width: 400px;
+    padding: 20px;
+    margin-right: 10px;
+  }
+  .card .header {
+    font-weight: bold;
+  }
+  .card .name {
+    font-size: 200%;
+  }
+  .card .actions {
+    font-size: 80%;
+    padding: 10px 0;
+  }
+  .card .actions a {
+    display: block;
+  }
+  .card .tags {
+    padding: 10px 0;
   }
 </style>
+
