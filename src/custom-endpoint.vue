@@ -24,17 +24,13 @@
             {{ifc.up ? 'UP' : 'DOWN'}}
           </span>
         </div>
-        <p class="description">Description vrevrevre btr btrbtg ngthbgb gbfvf grfgfgfg bhbt hththgtght</p>
+        <p class="description">{{ifc.description}}</p>
         <div class="actions">
           <a href="#">Documentation</a>
           <a href="#">Manage interface definitions</a>
         </div>
         <div class="tags">
-          <div class="tag">Tag 1</div>
-          <div class="tag">Tag 2</div>
-          <div class="tag">Tag 3</div>
-          <div class="tag">Tag 4</div>
-          <div class="tag">Tag 5</div>
+          <div class="tag" v-for="tag of ifc.tags">{{tag}}</div>
         </div>
       </div>
     </div>
@@ -69,7 +65,7 @@
     display: flex;
   }
   .interfaces .card {
-    width: 400px;
+    width: 600px;
     padding: 20px;
     margin-right: 10px;
   }
