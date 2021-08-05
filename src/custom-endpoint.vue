@@ -16,8 +16,6 @@
 
 <template>
   <div class="interfaces">
-    <p>Output: <span v-text="interfaces" /></p>
-    <div class="title">Instance: {{instance.id}}</div>
     <div class="card-wrapper">
       <div class="card" v-for="ifc of interfaces" :key="ifc.name">
         <div class="header">
