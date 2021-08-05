@@ -40,16 +40,16 @@ SBA.use({
       parent: 'instances', // <1>
       path: 'custom',
       component: customEndpoint,
-      label: 'CustomBlab',
+      label: 'Interfaces',
       group: 'custom', // <2>
       order: 1000,
-      isEnabled: ({instance}) => instance.hasEndpoint('custom') // <3>
+      isEnabled: ({instance}) => instance.hasEndpoint('interfaces') // <3>
     });
 
     vueI18n.mergeLocaleMessage('en', { // <4>
       sidebar: {
         custom : {
-          title : "My Custom Extensions"
+          title : "Interfaces"
         }
       }
     });
