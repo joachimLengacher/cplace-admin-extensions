@@ -67,28 +67,28 @@
     width: 80%;
     padding: 20px;
   }
-  .card-wrapper {
+  .interfaces .card-wrapper {
     display: flex;
   }
-  .card {
+  .interfaces .card {
     width: 400px;
     padding: 20px;
     margin-right: 10px;
   }
-  .card .header {
+  .interfaces .card .header {
     font-weight: bold;
   }
-  .card .name {
+  .interfaces .card .name {
     font-size: 200%;
   }
-  .card .actions {
+  .interfaces .card .actions {
     font-size: 80%;
     padding: 10px 0;
   }
-  .card .actions a {
+  .interfaces .card .actions a {
     display: block;
   }
-  .card .tags {
+  .interfaces .card .tags {
     padding: 10px 0;
   }
 </style>
