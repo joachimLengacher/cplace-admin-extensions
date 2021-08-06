@@ -19,18 +19,18 @@
     <div class="card-wrapper">
       <div class="card" v-for="ifc of interfaces" :key="ifc.name">
         <div class="header">
-          <span class="name">{{ifc.name}}</span>
+          <span class="name">{{ ifc.name }}</span>
           <span class="health-details__status" v-bind:class="[ifc.up ? 'health-details__status--UP' : 'health-details__status--DOWN']">
-            {{ifc.up ? 'UP' : 'DOWN'}}
+            {{ ifc.up ? 'UP' : 'DOWN' }}
           </span>
         </div>
-        <p class="description">{{ifc.description}}</p>
+        <p class="description">{{ ifc.description }}</p>
         <div class="actions">
           <a href="#">Documentation</a>
           <a href="#">Manage interface definitions</a>
         </div>
         <div class="tags">
-          <div class="tag" v-for="tag of ifc.tags">{{tag}}</div>
+          <div class="tag" v-for="tag of ifc.tags" :key="tag">{{ tag }}</div>
         </div>
       </div>
     </div>
