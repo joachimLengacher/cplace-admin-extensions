@@ -168,13 +168,8 @@
     color: #0078bd !important;
   }
 
-  .has-text-success {
+  p.title.has-text-success {
     color: #0078bd !important;
-  }
-
-  .login {
-    background-color: #880000 !important;
-    /*background-image: url("/assets/img/background.png") !important;*/
   }
 
   .hero.is-primary {
